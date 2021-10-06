@@ -1,0 +1,10 @@
+Pods/
+SuperRocket.xcodeproj/xcuserdata/
+SuperRocket.xcworkspace/xcuserdata/
+.DS_Store
+../a
+build
+SuperRocket.xcodeproj/contents.xcworkspacedata/
+SuperRocket.xcworkspace/xcuserdata/SuperRocket.xccheckout
+*.xcworkspace
+Podfile.lock

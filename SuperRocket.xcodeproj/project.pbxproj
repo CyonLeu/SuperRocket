@@ -13,6 +13,7 @@
 		2DD411AF270D381700B1BDC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD411AD270D381700B1BDC2 /* Main.storyboard */; };
 		2DD411B1270D381800B1BDC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DD411B0270D381800B1BDC2 /* Assets.xcassets */; };
 		2DD411B4270D381800B1BDC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD411B2270D381800B1BDC2 /* LaunchScreen.storyboard */; };
+		3FD87CE201C84C38A6228C5D /* Pods_SuperRocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA4A1B15993F1C59A607171F /* Pods_SuperRocket.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		2DD411B0270D381800B1BDC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DD411B3270D381800B1BDC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DD411B5270D381800B1BDC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E6F1A4219E84D5635EBA333 /* Pods-SuperRocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperRocket.release.xcconfig"; path = "Target Support Files/Pods-SuperRocket/Pods-SuperRocket.release.xcconfig"; sourceTree = "<group>"; };
+		985E34E20B0DC69D52B01F06 /* Pods-SuperRocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SuperRocket.debug.xcconfig"; path = "Target Support Files/Pods-SuperRocket/Pods-SuperRocket.debug.xcconfig"; sourceTree = "<group>"; };
+		FA4A1B15993F1C59A607171F /* Pods_SuperRocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SuperRocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FD87CE201C84C38A6228C5D /* Pods_SuperRocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		27849663B5B1230DAF2D26F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FA4A1B15993F1C59A607171F /* Pods_SuperRocket.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2DD4119B270D381700B1BDC2 = {
 			isa = PBXGroup;
 			children = (
 				2DD411A6270D381700B1BDC2 /* SuperRocket */,
 				2DD411A5270D381700B1BDC2 /* Products */,
+				75294FF1F5DFE5A2A0B5E758 /* Pods */,
+				27849663B5B1230DAF2D26F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +82,16 @@
 			path = SuperRocket;
 			sourceTree = "<group>";
 		};
+		75294FF1F5DFE5A2A0B5E758 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				985E34E20B0DC69D52B01F06 /* Pods-SuperRocket.debug.xcconfig */,
+				7E6F1A4219E84D5635EBA333 /* Pods-SuperRocket.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DD411B8270D381800B1BDC2 /* Build configuration list for PBXNativeTarget "SuperRocket" */;
 			buildPhases = (
+				9548D45FDBE305CFB34D0C2D /* [CP] Check Pods Manifest.lock */,
 				2DD411A0270D381700B1BDC2 /* Sources */,
 				2DD411A1270D381700B1BDC2 /* Frameworks */,
 				2DD411A2270D381700B1BDC2 /* Resources */,
+				80BEE52B70DD2FDD90681FCA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		80BEE52B70DD2FDD90681FCA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuperRocket/Pods-SuperRocket-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SuperRocket/Pods-SuperRocket-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SuperRocket/Pods-SuperRocket-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9548D45FDBE305CFB34D0C2D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SuperRocket-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2DD411A0270D381700B1BDC2 /* Sources */ = {
@@ -217,7 +286,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -272,7 +341,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -284,6 +353,7 @@
 		};
 		2DD411B9270D381800B1BDC2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 985E34E20B0DC69D52B01F06 /* Pods-SuperRocket.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +382,7 @@
 		};
 		2DD411BA270D381800B1BDC2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7E6F1A4219E84D5635EBA333 /* Pods-SuperRocket.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
