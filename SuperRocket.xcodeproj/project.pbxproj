@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03FC6247271D758B00512585 /* FWHomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC6246271D758B00512585 /* FWHomePageViewController.swift */; };
+		03FC624B271D760D00512585 /* FWMineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC624A271D760D00512585 /* FWMineViewController.swift */; };
+		03FC624D271D761800512585 /* FWRankPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FC624C271D761800512585 /* FWRankPageViewController.swift */; };
 		2DD411A8270D381700B1BDC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD411A7270D381700B1BDC2 /* AppDelegate.swift */; };
-		2DD411AA270D381700B1BDC2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD411A9270D381700B1BDC2 /* SceneDelegate.swift */; };
-		2DD411AC270D381700B1BDC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD411AB270D381700B1BDC2 /* ViewController.swift */; };
 		2DD411AF270D381700B1BDC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD411AD270D381700B1BDC2 /* Main.storyboard */; };
 		2DD411B1270D381800B1BDC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DD411B0270D381800B1BDC2 /* Assets.xcassets */; };
 		2DD411B4270D381800B1BDC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DD411B2270D381800B1BDC2 /* LaunchScreen.storyboard */; };
@@ -17,10 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03FC6246271D758B00512585 /* FWHomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FWHomePageViewController.swift; sourceTree = "<group>"; };
+		03FC624A271D760D00512585 /* FWMineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FWMineViewController.swift; sourceTree = "<group>"; };
+		03FC624C271D761800512585 /* FWRankPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FWRankPageViewController.swift; sourceTree = "<group>"; };
 		2DD411A4270D381700B1BDC2 /* SuperRocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperRocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DD411A7270D381700B1BDC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2DD411A9270D381700B1BDC2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2DD411AB270D381700B1BDC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2DD411AE270D381700B1BDC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2DD411B0270D381800B1BDC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DD411B3270D381800B1BDC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +44,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03FC6243271D755000512585 /* Section */ = {
+			isa = PBXGroup;
+			children = (
+				03FC6249271D75FF00512585 /* Rank */,
+				03FC6248271D75F500512585 /* Mine */,
+				03FC6245271D756B00512585 /* Home */,
+			);
+			path = Section;
+			sourceTree = "<group>";
+		};
+		03FC6244271D756000512585 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		03FC6245271D756B00512585 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				03FC6246271D758B00512585 /* FWHomePageViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		03FC6248271D75F500512585 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				03FC624A271D760D00512585 /* FWMineViewController.swift */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		03FC6249271D75FF00512585 /* Rank */ = {
+			isa = PBXGroup;
+			children = (
+				03FC624C271D761800512585 /* FWRankPageViewController.swift */,
+			);
+			path = Rank;
+			sourceTree = "<group>";
+		};
 		27849663B5B1230DAF2D26F3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -71,9 +114,9 @@
 		2DD411A6270D381700B1BDC2 /* SuperRocket */ = {
 			isa = PBXGroup;
 			children = (
+				03FC6244271D756000512585 /* Common */,
+				03FC6243271D755000512585 /* Section */,
 				2DD411A7270D381700B1BDC2 /* AppDelegate.swift */,
-				2DD411A9270D381700B1BDC2 /* SceneDelegate.swift */,
-				2DD411AB270D381700B1BDC2 /* ViewController.swift */,
 				2DD411AD270D381700B1BDC2 /* Main.storyboard */,
 				2DD411B0270D381800B1BDC2 /* Assets.xcassets */,
 				2DD411B2270D381800B1BDC2 /* LaunchScreen.storyboard */,
@@ -88,7 +131,6 @@
 				985E34E20B0DC69D52B01F06 /* Pods-SuperRocket.debug.xcconfig */,
 				7E6F1A4219E84D5635EBA333 /* Pods-SuperRocket.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,9 +249,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DD411AC270D381700B1BDC2 /* ViewController.swift in Sources */,
+				03FC624B271D760D00512585 /* FWMineViewController.swift in Sources */,
 				2DD411A8270D381700B1BDC2 /* AppDelegate.swift in Sources */,
-				2DD411AA270D381700B1BDC2 /* SceneDelegate.swift in Sources */,
+				03FC624D271D761800512585 /* FWRankPageViewController.swift in Sources */,
+				03FC6247271D758B00512585 /* FWHomePageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,7 +407,6 @@
 				INFOPLIST_FILE = SuperRocket/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -393,7 +435,6 @@
 				INFOPLIST_FILE = SuperRocket/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

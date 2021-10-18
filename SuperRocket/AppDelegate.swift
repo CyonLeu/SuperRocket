@@ -10,25 +10,51 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var window: UIWindow?
+    var tabController: UITabBarController?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.backgroundColor = UIColor.white
+        
+        //初始化tab页面
+        setupTabController()
+        
+        window?.rootViewController = tabController
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
-    // MARK: UISceneSession Lifecycle
-
-    func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
-        // Called when a new scene session is being created.
-        // Use this method to select a configuration to create the new scene with.
-        return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
-    }
-
-    func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) {
-        // Called when the user discards a scene session.
-        // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-        // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+    func setupTabController(){
+        tabController = UITabBarController()
+        tabController?.tabBar.tintColor = UIColor.white.withAlphaComponent(0.9)
+        
+        let homeVC = FWHomePageViewController()
+        homeVC.title = "首页"
+        homeVC.tabBarItem = UITabBarItem(title: "首页", image: UIImage(named: "bar_icon_home_gray")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "bar_icon_home")?.withRenderingMode(.alwaysOriginal))
+        homeVC.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.green]
+                                                 , for: UIControl.State.selected)
+        let homeNavController = UINavigationController(rootViewController: homeVC)
+        
+        let rankVC = FWRankPageViewController()
+        rankVC.title = "排行榜"
+        rankVC.tabBarItem = UITabBarItem(title: "排行榜", image: UIImage(named: "bar_icon_group_gray")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "bar_icon_group")?.withRenderingMode(.alwaysOriginal))
+        rankVC.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.green]
+                                                 , for: UIControl.State.selected)
+        let rankNavController = UINavigationController(rootViewController: rankVC)
+        
+        let mineVC = FWMineViewController()
+        mineVC.title = "我"
+        mineVC.tabBarItem = UITabBarItem(title: "我", image: UIImage(named: "bar_icon_my_gray")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "bar_icon_my")?.withRenderingMode(.alwaysOriginal))
+        mineVC.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.green]
+                                                 , for: UIControl.State.selected)
+        let mineNavController = UINavigationController(rootViewController: mineVC)
+        
+        tabController?.setViewControllers([homeNavController, rankNavController, mineNavController], animated: true)
     }
 
 
